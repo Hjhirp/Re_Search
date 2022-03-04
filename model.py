@@ -292,7 +292,7 @@ tfidf_mat.shape
 
 
 def sampling():
-    return df_cleaned[['Title']].sample(5)
+    return df_cleaned[['Title','Authors', 'Year', 'Link']].sample(5)
 
 from gensim.models.word2vec import Word2Vec
 
