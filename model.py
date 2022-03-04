@@ -12,8 +12,8 @@ import string #This is a module, Python also has built-in class str, these are d
 
 df_cleaned = pd.read_csv('df_final.csv')
 
-df_cleaned.drop(['Authors', 'Year', 'Issue', 'Art. No.', 'Page start', 'Page end', 
-               'Page count', 'Cited by', 'Link', 'Document Type', 
+df_cleaned.drop(['Issue', 'Art. No.', 'Page start', 'Page end', 
+               'Page count', 'Cited by', 'Document Type', 
                'Source'],axis=1, inplace=True)
 
 #Let us see what do we have. 
@@ -337,5 +337,5 @@ def predict_w2v(query_sentence, dataset, model, topk=5):
 
 def recommend(query_sentence):
   best_index =predict_w2v(query_sentence, df_cleaned['All'].values, word2vec_model)    
-  return df_cleaned[['Title']].iloc[best_index]
+  return df_cleaned[['Title','Authors', 'Year', 'Link']].iloc[best_index]
 # display(df[['Title']].iloc[best_index])
