@@ -1,5 +1,5 @@
 from random import sample
-from turtle import width
+# from turtle import width
 import streamlit as st
 # st.write("hersulllll and manen bot sweetie")
 from model import recommend
