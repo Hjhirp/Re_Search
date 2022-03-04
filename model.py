@@ -297,7 +297,7 @@ def sampling():
 from gensim.models.word2vec import Word2Vec
 
 # Create model
-word2vec_model = Word2Vec(min_count=0, workers = 8, vector_size=400) 
+word2vec_model = Word2Vec(min_count=0, workers = 8, size=400) 
 # Prepare vocab
 word2vec_model.build_vocab(df_cleaned['All'].values)
 # Train
