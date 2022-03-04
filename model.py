@@ -292,7 +292,8 @@ tfidf_mat.shape
 
 
 def sampling():
-    return df_cleaned[['Title','Authors', 'Year', 'Link']].sample(5)
+    df = df_cleaned[['Title','Authors', 'Year', 'Link']].sample(5).reset_index()
+    return df
 
 from gensim.models.word2vec import Word2Vec
 
@@ -337,5 +338,6 @@ def predict_w2v(query_sentence, dataset, model, topk=5):
 
 def recommend(query_sentence):
   best_index =predict_w2v(query_sentence, df_cleaned['All'].values, word2vec_model)    
-  return df_cleaned[['Title','Authors', 'Year', 'Link']].iloc[best_index]
+  df = df_cleaned[['Title','Authors', 'Year', 'Link']].iloc[best_index].reset_index()
+  return df
 # display(df[['Title']].iloc[best_index])
