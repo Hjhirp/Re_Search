@@ -104,7 +104,7 @@ elif add_selectbox == 'Visualization':
 
 elif add_selectbox == 'Conclusion':
   st.title("Conclusion")
-  st.write("1.The project gives required output of relevant research papers according to the phrase query entered by the user in the search box along with links to those papers.")
+  st.write("1. The project gives required output of relevant research papers according to the phrase query entered by the user in the search box along with links to those papers.")
   st.write('2. Currently the database of the project consists of 5000 papers. But we can increase the size of the database as per the requirement of the system as the project is scalable according to our need.')
   st.write('3. The compilation time and training time of model is minimal. The model training happens only one time. It does not train again unless there is a change in code or the database.') 
   st.write('4. The model is robust and performs efficiently to fulfil our purpose. It also displays a default output in case of empty query input.')
