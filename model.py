@@ -326,12 +326,14 @@ def prediction_w2v(query_sentence, dataset, model, topk=5):
     return best_index
 
 def recommend(query_sentence):
+  query_sentence = query_sentence.lower()
   best_index =prediction_w2v(query_sentence, df_cleaned['All'].values, w2v_model)    
   df = df_cleaned[['Title','Authors', 'Year', 'Link']].iloc[best_index].reset_index(drop=True)
   df.index = df.index + 1
   return df
 
 def more(query_sentence, n=0):
+    query_sentence = query_sentence.lower()
     best_index =prediction_w2v(query_sentence, df_cleaned['All'].values, w2v_model , topk = 5*n)    
     df = df_cleaned[['Title','Authors', 'Year', 'Link']].iloc[best_index].reset_index(drop=True)
     df = df.iloc[5*n:5*n+1]
