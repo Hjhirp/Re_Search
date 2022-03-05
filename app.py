@@ -42,6 +42,15 @@ if add_selectbox == 'Home':
   if button_clicked:
     output = recommend(selected)
     st.dataframe(output, width= 1500 , height = 900)
+    i=0
+    while True:
+      if st.button("Show More"):
+        i +=1
+        output = more(selected, i)
+        st.dataframe(output, width= 1500 , height = 900)
+      
+      elif st.button("Done"):
+        break
   else:
     output = sampling()
     st.dataframe(output, width= 1500 , height = 900)
@@ -52,8 +61,8 @@ elif add_selectbox == 'Project Summary':
     st.write("Data for this project would be from the research papers available across various platforms. We have taken the data available from research papers on the Scopus website database. Our dataset consists of data from 5000 research paper belonging to 10 different topics. The required features for the recommendation system have been extracted. Data cleaning and data pre-processing has been performed  through lemmatization, porter stemmer and tokenization. Data is made ready for modelling.")
   
   with st.container():
-    st.title("Data Modelling")
-    st.write("Model Building Review based approach has been used to train data and build the model. The recommendation system takes a phrase as query input and recommends top 5 papers relevant to the query. Algorithms used for model building are: \n 1.	TF-IDF Similarity\n 2.	Cosine Similarity\n3. Word2Vec")
+    st.title("Data Modeling")
+    st.write("Model Building Review based approach has been used to train data and build the model. The recommendation system takes a phrase as query input and recommends top 5 papers relevant to the query. Algorithms used for model building are: \n1.	TF-IDF Similarity\n2.	Cosine Similarity\n3. Word2Vec \n4. Autoencoder")
 
   with st.container():
     st.title("UI Design")
@@ -91,3 +100,11 @@ elif add_selectbox == 'Visualization':
   st.image(image1, caption='Abstract')
   st.image(image2, caption='Title')
   st.image(image3, caption='All')
+
+
+elif add_selectbox == 'Conclusion':
+  st.title("Conclusion")
+  st.write("1.The project gives required output of relevant research papers according to the phrase query entered by the user in the search box along with links to those papers.")
+  st.write('2. Currently the database of the project consists of 5000 papers. But we can increase the size of the database as per the requirement of the system as the project is scalable according to our need.')
+  st.write('3. The compilation time and training time of model is minimal. The model training happens only one time. It does not train again unless there is a change in code or the database.') 
+  st.write('4. The model is robust and performs efficiently to fulfil our purpose. It also displays a default output in case of empty query input.')
