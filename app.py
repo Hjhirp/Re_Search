@@ -1,7 +1,5 @@
 from random import sample
-# from turtle import width
 import streamlit as st
-# st.write("hersulllll and manen bot sweetie")
 from model import recommend
 from model import sampling
 import pandas as pd
@@ -43,15 +41,9 @@ if add_selectbox == 'Home':
 
   if button_clicked:
     output = recommend(selected)
-
-    data = [['tommmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm', 10], ['nick', 15], ['juli', 14]]
-    df = pd.DataFrame(data, columns = ['Name', 'Age'])
-
     st.dataframe(output, width= 1500 , height = 900)
   else:
     output = sampling()
-    data = [['tommmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm', 10], ['nick', 15], ['juli', 14]]
-    df = pd.DataFrame(data, columns = ['Name', 'Age'])
     st.dataframe(output, width= 1500 , height = 900)
 
 elif add_selectbox == 'Project Summary':
