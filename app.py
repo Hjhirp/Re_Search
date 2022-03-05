@@ -43,15 +43,15 @@ if add_selectbox == 'Home':
   if button_clicked:
     output = recommend(selected)
     st.dataframe(output, width= 1500 , height = 900)
-    
+    i = 0
+  elif st.button("More"):
+      i +=1
+      output = more(selected, i)
+      st.dataframe(output, width= 1500 , height = 900)
   else:
     output = sampling()
     st.dataframe(output, width= 1500 , height = 900)
 
-  if st.button("More"):
-      i +=1
-      output = more(selected, i)
-      st.dataframe(output, width= 1500 , height = 900)
 
 elif add_selectbox == 'Project Summary':
   with st.container():
