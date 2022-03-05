@@ -1,4 +1,21 @@
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/HJHirpara/Re_Search">
+    <h2>RE-SEARCH for Researchers</h2>
+  </a>
+</div>
 
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Re-Search for Researchers is a recommender system which is built for the use of researchers who face the hassle of finding the research papers they require depending upon their topic of interest.
+
+The recommender system takes the phrase/topic of interest as query input and displays relevant research papers according to the topic entered. The database of the research papers is collected from the various papers available on different subjects on the Scopus web database. 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
