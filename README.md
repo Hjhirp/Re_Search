@@ -10,7 +10,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 Re-Search for Researchers is a recommender system which is built for the use of researchers who face the hassle of finding the research papers they require depending upon their topic of interest.
 
 The recommender system takes the phrase/topic of interest as query input and displays relevant research papers according to the topic entered. The database of the research papers is collected from the various papers available on different subjects on the Scopus web database. 
@@ -104,11 +103,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Aditya Sud - (https://www.linkedin.com/in/adityavsud)
-Harshal Hirpara - (https://www.linkedin.com/in/harshaljhirpara)
-Tanmay Joshi - (https://www.linkedin.com/in/tanmay-joshi-59bb5b214/)
-Manan Joshi - (https://www.linkedin.com/in/manan-patel-0299a9202/)
-Manushi Munshi - (https://www.linkedin.com/in/ManushiMunshi/)
+<p>Aditya Sud - (https://www.linkedin.com/in/adityavsud)</p>
+<p>Harshal Hirpara - (https://www.linkedin.com/in/harshaljhirpara)</p>
+<p>Tanmay Joshi - (https://www.linkedin.com/in/tanmay-joshi-59bb5b214/)</p>
+<p>Manan Joshi - (https://www.linkedin.com/in/manan-patel-0299a9202/)</p>
+<p>Manushi Munshi - (https://www.linkedin.com/in/ManushiMunshi/)</p>
 
 Project Link: [https://github.com/HJHirpara/Re_Search](https://github.com/HJHirpara/Re_Search)
 
