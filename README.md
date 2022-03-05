@@ -6,28 +6,26 @@
 ### Prerequisites
 
 * streamlit
-* numpy==1.19.5
-* pandas==1.3.5
-* regex==2019.12.20
-* scikit-learn==1.0.2
-* scipy==1.4.1
-* seaborn==0.11.2
-* sklearn==0.0
-* sklearn-pandas==1.8.0
-* spacy==2.2.4
-* statsmodels==0.10.2
-* nltk==3.2.5
-* gensim==3.6.0
+* numpy
+* pandas
+* regex
+* scikit-learn
+* scipy
+* seaborn
+* sklearn
+* sklearn-pandas
+* spacy
+* statsmodels
+* nltk
+* gensim
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/HJHirpara/Re_Search.git
    ```
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 # Research-Paper-Summerisation
@@ -78,3 +76,24 @@ Autoencoder:
 Auto encoder is an unsupervised learning technique which is used  mainly for compression of sparse data. It is also used for feature extraction in image processing. In our project we tried to use the auto encoder to do word embeddings as we have a large bag of words. Auto encoder will help us to compress the bag of words and give some relationship between each words. It will result in a numerical embedding matrix which will help us to find the cosine similarity between the research documents.
 
 Best results were achieved using the Word2Vec approach. 
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- CONTACT -->
+## Contact
+
+Aditya Sud - (https://www.linkedin.com/in/adityavsud)
+Harshal Hirpara - (https://www.linkedin.com/in/harshaljhirpara)
+Tanmay Joshi - (https://www.linkedin.com/in/tanmay-joshi-59bb5b214/)
+Manan Joshi - (https://www.linkedin.com/in/manan-patel-0299a9202/)
+Manushi Munshi - (https://www.linkedin.com/in/ManushiMunshi/)
+
+Project Link: [https://github.com/HJHirpara/Re_Search](https://github.com/HJHirpara/Re_Search)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
