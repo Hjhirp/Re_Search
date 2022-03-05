@@ -123,53 +123,53 @@ df_cleaned['All'] = df_cleaned['All'].apply(lambda x: do_stemming(x))
 #Note changes in the output, you may not be happy, another option is SnowballStemmer
 
 #---------------
-def remove_frequentwords(in_str):
-    new_str=''
-    words = in_str.split() #string is splitted through white space in a list of words
-    for tx in words:
-        if tx not in nltk_stopwords:
-            new_str=new_str + tx + " "
-    return new_str
+# def remove_frequentwords(in_str):
+#     new_str=''
+#     words = in_str.split() #string is splitted through white space in a list of words
+#     for tx in words:
+#         if tx not in nltk_stopwords:
+#             new_str=new_str + tx + " "
+#     return new_str
 
-#-------------------------
-from collections import Counter
+# #-------------------------
+# from collections import Counter
 
-def CountFrequent(in_str):
-  counter=Counter()
+# def CountFrequent(in_str):
+#   counter=Counter()
 
-  for text in in_str:
-    for word in text.split():
-        counter[word]+=1
+#   for text in in_str:
+#     for word in text.split():
+#         counter[word]+=1
         
-  print(type(counter))
-  #list with 10 most frequent word. List is a list of (10) tuples
-  most_cmn_list=counter.most_common(10)
+#   print(type(counter))
+#   #list with 10 most frequent word. List is a list of (10) tuples
+#   most_cmn_list=counter.most_common(10)
     
-  print(type(most_cmn_list), most_cmn_list) #type is list (list of tuples/word,frequency pair)
+#   print(type(most_cmn_list), most_cmn_list) #type is list (list of tuples/word,frequency pair)
     
-  most_cmn_words_list=[]
+#   most_cmn_words_list=[]
 
-  for word, freq in most_cmn_list:
-      most_cmn_words_list.append(word)
+#   for word, freq in most_cmn_list:
+#       most_cmn_words_list.append(word)
 
-  return most_cmn_words_list 
+#   return most_cmn_words_list 
 
-#------------------------------------
-#Remove top 10 frequent words 
+# #------------------------------------
+# #Remove top 10 frequent words 
 
-most_cmn_words_abstract = CountFrequent(df_cleaned['Abstract'])
-most_cmn_words_src = CountFrequent(df_cleaned['Source title'])
+# most_cmn_words_abstract = CountFrequent(df_cleaned['Abstract'])
+# most_cmn_words_src = CountFrequent(df_cleaned['Source title'])
 
 #function to remove words
-def remove_frequent(in_str, cmn_words):
-    new_str=''
-    for word in in_str.split():
-        if word not in cmn_words:
-            new_str=new_str + word + " "
-    return new_str
+# def remove_frequent(in_str, cmn_words):
+#     new_str=''
+#     for word in in_str.split():
+#         if word not in cmn_words:
+#             new_str=new_str + word + " "
+#     return new_str
 
-df_cleaned['Abstract']=df_cleaned['Abstract'].apply(lambda x: remove_frequent(x,most_cmn_words_abstract))
-df_cleaned['Source title']=df_cleaned['Source title'].apply(lambda x: remove_frequent(x,most_cmn_words_src))
+# df_cleaned['Abstract']=df_cleaned['Abstract'].apply(lambda x: remove_frequent(x,most_cmn_words_abstract))
+# df_cleaned['Source title']=df_cleaned['Source title'].apply(lambda x: remove_frequent(x,most_cmn_words_src))
 
 #print(train["lowered_text_stop_removed_freq_removed"].head(10))
 
@@ -206,8 +206,8 @@ df_cleaned['Source title']=df_cleaned['Source title'].apply(lambda x: remove_fre
 nltk.download('punkt')
 
 from nltk.tokenize import word_tokenize
-df_cleaned['Abstract'] = df_cleaned['Abstract'].apply(word_tokenize)
-df_cleaned['Source title'] = df_cleaned['Source title'].apply(word_tokenize)
+# df_cleaned['Abstract'] = df_cleaned['Abstract'].apply(word_tokenize)
+# df_cleaned['Source title'] = df_cleaned['Source title'].apply(word_tokenize)
 
 # df_cleaned['Title'] = df_cleaned['Title'].apply(word_tokenize)
 # df_cleaned['Author_Keywords_Abstract'] = df_cleaned['Author_Keywords_Abstract'].apply(word_tokenize)
