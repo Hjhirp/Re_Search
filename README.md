@@ -1,3 +1,35 @@
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+### Prerequisites
+
+* streamlit
+* numpy==1.19.5
+* pandas==1.3.5
+* regex==2019.12.20
+* scikit-learn==1.0.2
+* scipy==1.4.1
+* seaborn==0.11.2
+* sklearn==0.0
+* sklearn-pandas==1.8.0
+* spacy==2.2.4
+* statsmodels==0.10.2
+* nltk==3.2.5
+* gensim==3.6.0
+
+### Installation
+
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/HJHirpara/Re_Search.git
+   ```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
 # Research-Paper-Summerisation
 
 ## Dataset
@@ -17,7 +49,7 @@ Information rich columns: Abstract, Title, Source Title, Author Keywords & Index
 Converting to Lowercase
 The Information rich columns were all converted to lowercase, a common NLP step.
 Removing Punctuation
-Punctuation marks !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~  were removed from the Information rich columns.
+Punctuation marks !"#$%&'()*+,-./:;<=>?@[\]^_{|}~  were removed from the Information rich columns.
 Removing Stopwords
 Stop words are the most common words in any language and do not add much information to the text. English stop words, which are irrelevant to the data were removed.
 
@@ -36,13 +68,13 @@ After the data-preprocessing, all Information rich columns were merged into a si
 
 We tried the following approaches for our recommendation system:
 
-TF-IDF – Cosine Similarity
+TF-IDF – Cosine Similarity:
 Term Frequency — Inverse Document Frequency is a technique to quantify words in a set of documents. We generally compute a score for each word to signify its importance in the document. By computing the Cosine similarity between the TF-IDF score of our query and each Research Paper in our dataset we are able to rank them according to their relevance. 
 
-Word2Vec
+Word2Vec:
 Word2vec algorithm uses a neural network model to learn word associations from a large corpus of text. Once trained, such a model can detect synonymous words or suggest additional words for a partial sentence. Its input is a text corpus and its output is a set of vectors: feature vectors that represent words in that corpus. Word2Vec helps us find the transitional probabilities between words which are discreet values: the likelihood that they will co-occur. We create a similarity matrix using Word2Vec and use it to find and sort the relevant results in order of their relevance. 
 
-Autoencoder
+Autoencoder:
 Auto encoder is an unsupervised learning technique which is used  mainly for compression of sparse data. It is also used for feature extraction in image processing. In our project we tried to use the auto encoder to do word embeddings as we have a large bag of words. Auto encoder will help us to compress the bag of words and give some relationship between each words. It will result in a numerical embedding matrix which will help us to find the cosine similarity between the research documents.
 
 Best results were achieved using the Word2Vec approach. 
