@@ -2,6 +2,7 @@ from random import sample
 import streamlit as st
 from model import recommend
 from model import sampling
+from model import more
 import pandas as pd
 from PIL import Image
 
