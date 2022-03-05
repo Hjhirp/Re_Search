@@ -342,4 +342,15 @@ def recommend(query_sentence):
   df = df_cleaned[['Title','Authors', 'Year', 'Link']].iloc[best_index].reset_index(drop=True)
   df.index = df.index + 1
   return df
+
+def more(query_sentence, n=0):
+    best_index =predict_w2v(query_sentence, df_cleaned['All'].values, word2vec_model , topk = 5*n)    
+    df = df_cleaned[['Title','Authors', 'Year', 'Link']].iloc[best_index].reset_index(drop=True)
+    df = df.iloc[5*n:5*n+1]
+    df.index = df.index + 1
+    return df
+
 # display(df[['Title']].iloc[best_index])
+
+
+
