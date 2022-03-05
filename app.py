@@ -39,13 +39,13 @@ if add_selectbox == 'Home':
   icon("search")
   selected = st.text_input("", "Search...")
   button_clicked = st.button("OK")
-  button_clicked = st.button("More")
+  button_clicked2 = st.button("More")
   i=1
   if button_clicked:
     output = recommend(selected)
     st.dataframe(output, width= 1500 , height = 900)
     i = 1
-  elif st.button("More"):
+  elif button_clicked2:
       i +=1
       output = more(selected, i)
       st.dataframe(output, width= 1500 , height = 900)
