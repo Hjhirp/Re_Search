@@ -106,7 +106,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p>Aditya Sud - (https://www.linkedin.com/in/adityavsud)</p>
 <p>Harshal Hirpara - (https://www.linkedin.com/in/harshaljhirpara)</p>
 <p>Tanmay Joshi - (https://www.linkedin.com/in/tanmay-joshi-59bb5b214/)</p>
-<p>Manan Joshi - (https://www.linkedin.com/in/manan-patel-0299a9202/)</p>
+<p>Manan Patel - (https://www.linkedin.com/in/manan-patel-0299a9202/)</p>
 <p>Manushi Munshi - (https://www.linkedin.com/in/ManushiMunshi/)</p>
 
 Project Link: [https://github.com/HJHirpara/Re_Search](https://github.com/HJHirpara/Re_Search)
